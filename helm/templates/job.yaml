@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: my-single-vote-job2
+spec:
+  template:
+    spec:
+      containers:
+        - name: job
+          image: curlimages/curl:7.72.0
+          command:
+            - /bin/sh
+            - -c
+            - curl -X POST http://vote:5000/ -d "vote=b"
+      restartPolicy: Never
