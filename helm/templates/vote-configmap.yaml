@@ -9,7 +9,7 @@ data:
     html,body{
       margin: 0;
       padding: 0;
-      background-color: #C3EAE4;
+      background-color: {{ .Values.vote.color }};
       height: 100vh;
       font-family: 'Open Sans';
     }
